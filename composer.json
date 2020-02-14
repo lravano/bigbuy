@@ -1,0 +1,31 @@
+{
+    "name": "made/bigbuy",
+    "description": "This package is a wrapper for BigBuy REST API",
+    "authors": [
+        {
+            "name": "Lorenzo Ravano",
+            "email": "l.ravano88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "~6.0"        
+    },
+    "autoload": {
+        "psr-4": {
+            "Made\\BigBuy\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Made\\BigBuy\\BigBuyServiceProvider"
+            ],
+            "aliases": {
+                "BigBuy": "Made\\BigBuy\\Facade"
+            }
+        }
+    }   
+
+}
